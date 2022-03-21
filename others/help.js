@@ -1,31 +1,35 @@
-const { MessageEmbed } = require("discord.js");
+const { Client, Collection, MessageEmbed } = require(`discord.js`);
+const { 
+  PREFIX, 
+} = require(`../config.json`);
+
+  
+
 
 module.exports = {
   name: "help",
   aliases: ["h"],
-  cooldown: 5,
+  cooldown: 8,
   description: "**all commands**",
   execute(message) {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
-    .setTitle(`**Ability  Commands**`)
+    .setThumbnail(`https://cdn.discordapp.com/attachments/938824959625662554/955523441107300402/music-logo-design.jpg`)
+    .setTitle(`**ITuneR Commands**`)
+    .setDescription(`
+**🔰┊Info Commands**
+invite ,support ,about ,ping ,uptime ,bot
+**🎵┊Music Commands**
+play , skip , skipto , stop , volume , nowplaying , shuffle , search , resume ,
+remove , queue , filter , loop , lyrics
+**🔗┊Links**
+[Support](https://discord.gg/vCyZr3vyjY) - [Invite](https://discord.com/api/oauth2/authorize?client_id=954070757472890890&permissions=8&scope=bot)
+`)
 
-    .setDescription(` 
-> **Music Command**
-> \` %paly\` • \`%stop\` • \`%skip\` • \`%skipto\` • \`%volume \`
-> \` %queue\` • \`%loop\` • \`%pause\` • \`%nowplaying \`
-> \` %shuffle\` • \`%uptime\` • \`%search\` • \`%remove \`
-> \` %radio\` • \`%filter\` • \`%lyrics\` • \`%resume\`
-> **Info Command**
-> \` %bot\` • \`%support\` • \`%invite\` • \`%help\` • \`%ping\`
-
-> **[ \`invite\` ](https://discord.com/api/oauth2/authorize?client_id=867208331659706379&permissions=0&scope=bot)** 
-> **[ \`support\` ](https://discord.gg/dTNKbPXw9Y)**                                                              
- `)
-    
-    helpEmbed.setTimestamp();
-
+   .setFooter(`${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
+   .setColor("RANDOM");
+   message.react("✅")
     return message.channel.send(helpEmbed).catch(console.error);
 
   }
