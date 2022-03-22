@@ -10,7 +10,7 @@ module.exports = {
     let helpEmbed = new MessageEmbed()
     .setDescription(` 
 \`link server\`
-**[ support ](https://discord.gg/dTNKbPXw9Y)**   
+**[ support ](https://discord.gg/vCyZr3vyjY)**   
  `)
     
     helpEmbed.setTimestamp();
