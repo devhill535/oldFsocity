@@ -85,7 +85,7 @@ client.on(`message`, async (message) => {
 }
 
   if(message.content.includes(client.user.id)) {
-    message.reply(new Discord.MessageEmbed().setColor("#00ebaa").setAuthor(`${message.author.username}, My Prefix is ${PREFIX}, to get started; type ${PREFIX}help`, message.author.displayAvatarURL({dynamic:true})));
+    message.reply(new Discord.MessageEmbed().setColor("RANDOM").setAuthor(`${message.author.username}, My Prefix is ${PREFIX}, to get started; type ${PREFIX}help`, message.author.displayAvatarURL({dynamic:true})));
   } 
 //command Handler DO NOT TOUCH
  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
@@ -108,8 +108,8 @@ client.on(`message`, async (message) => {
    if (now < expirationTime) {
      const timeLeft = (expirationTime - now) / 1000;
      return message.reply(
-      new MessageEmbed().setColor("#30ff91")
-      .setTitle(`❌ Please wait \`${timeLeft.toFixed(1)} seconds\` before reusing the \`${PREFIX}${command.name}\`!`)    
+      new MessageEmbed().setColor("RANDOM")
+      .setTitle(`<a:778566105252888576:955522901828853840> Please wait \`${timeLeft.toFixed(1)} seconds\` before reusing the \`${PREFIX}${command.name}\`!`)    
      );
    }
  }
