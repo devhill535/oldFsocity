@@ -19,7 +19,7 @@ execute(message,args,client) {
     //if not in a guild return
     if(!message.guild) return;
     //react with approve emoji
-    message.react("✅").catch(console.error);
+    message.react("<a:794514869579153408:955522901463941161>").catch(console.error);
     //get the Queue
     const queue = message.client.queue.get(message.guild.id);
     //if no queue return error
@@ -39,7 +39,7 @@ execute(message,args,client) {
     message.client.queue.set(message.guild.id, queue);
     //send the Approve message
     queue.textChannel.send(new MessageEmbed()
-    .setDescription(`**✅ | ${message.author} shuffled the Queue**`)
-    .setColor("#c219d8")).catch(console.error);
+    .setDescription(`**<a:794514869579153408:955522901463941161> | ${message.author} shuffled the Queue**`)
+    .setColor("RANDOM")).catch(console.error);
   }
 };
