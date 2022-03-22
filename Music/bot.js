@@ -9,10 +9,10 @@ module.exports = {
     let commands = message.client.commands.array();
 
     let helpEmbed = new MessageEmbed()
-   .setTitle(`**Info Ability**`)
+   .setTitle(`**Info ITuneR**`)
    
     
-    .addField("`my name`", `**Ability#9714**`, true)
+    .addField("`My name`", `**ITuneR#9298**`, true)
 
     .addField("`My ID`",  `**867208331659706379**`, true)
     
