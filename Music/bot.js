@@ -14,9 +14,9 @@ module.exports = {
     
     .addField("`My name`", `**ITuneR#9298**`, true)
 
-    .addField("`My ID`",  `**867208331659706379**`, true)
+    .addField("`My ID`",  `**954070757472890890**`, true)
     
-    .addField( "`My Prefix` ",`**%**`,true)
+    .addField( "`My Prefix` ",`**+**`,true)
     
     .addField("`Node.js Version`",  `**12**`, true)
     
@@ -24,7 +24,7 @@ module.exports = {
     
     .addField("`Discord.js `",  `**12.5.1**`, true)
     
-    .addField( "`developer bot` ",`<@681553671364018196>`,true)
+    .addField( "`Developer bot` ",`<@622509869546602506>`,true)
     
    
     
