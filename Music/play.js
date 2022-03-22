@@ -33,7 +33,7 @@ async execute(message, args, client) {
     if (!args.length)
       return attentionembed(message, `Usage: ${message.client.prefix}play <YouTube URL | Video Name | Soundcloud URL>`);
     //react with approve emoji
-    message.react("✅").catch(console.error);
+    message.react("<a:794514869579153408:955522901463941161>").catch(console.error);
     //get permissions and send error if bot doesnt have enough
     const permissions = channel.permissionsFor(message.client.user);
     if (!permissions.has("CONNECT"))
@@ -67,29 +67,29 @@ async execute(message, args, client) {
       if (serverQueue) {
         //if its an url
         if (urlValid) { //send searching link
-          message.channel.send(new MessageEmbed().setColor("#c219d8")
+          message.channel.send(new MessageEmbed().setColor("RANDOM")
             .setDescription(`**💢 Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
         //if not
         }
         else { //send searching TITLE
-          message.channel.send(new MessageEmbed().setColor("#c219d8")
+          message.channel.send(new MessageEmbed().setColor("RANDOM")
             .setDescription(`**💢 Searching 🔍 \`${args.join(" ")}\`**`))
         }
       } else {
         //If nothing is playing join the channel
         queueConstruct.connection = await channel.join();
         //send join message
-        message.channel.send(new MessageEmbed().setColor("#c219d8")
+        message.channel.send(new MessageEmbed().setColor("RANDOM")
           .setDescription(`**👍 Joined \`${channel.name}\` 📄 bound \`#${message.channel.name}\`**`)
           .setFooter(`By: ${message.author.username}#${message.author.discriminator}`))
         //if its an url
         if (urlValid) { //send searching link
-          message.channel.send(new MessageEmbed().setColor("#c219d8")
+          message.channel.send(new MessageEmbed().setColor("RANDOM")
             .setDescription(`**💢 Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
           //if not 
         }
         else { //send searching TITLE
-          message.channel.send(new MessageEmbed().setColor("#c219d8")
+          message.channel.send(new MessageEmbed().setColor("RANDOM")
             .setDescription(`**💢 Searching 🔍 \`${args.join(" ")}\`**`))
         }
         //Set selfdeaf and serverdeaf true
@@ -159,8 +159,8 @@ async execute(message, args, client) {
       serverQueue.songs.push(song);
       //the new song embed
       const newsong = new MessageEmbed()
-        .setTitle("✅ " + song.title)
-        .setColor("#c219d8")
+        .setTitle("<a:794514869579153408:955522901463941161> " + song.title)
+        .setColor("RANDOM")
         .setThumbnail(thumb)
         .setURL(song.url)
         .setDescription(`\`\`\`Has been added to the Queue.\`\`\``)
