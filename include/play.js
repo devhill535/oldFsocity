@@ -133,7 +133,7 @@ module.exports = {
 
     try {
       const newsong = new MessageEmbed()
-        .setTitle("✅ "+song.title)
+        .setTitle("<a:864935810192769074:955522901635899456> "+song.title)
         .setURL(song.url)
         .setColor("#c219d8")
         .setThumbnail(thumb)
@@ -187,7 +187,7 @@ module.exports = {
           splitDescription.forEach(async (m) => {
       
             queueEmbed.setDescription(m);
-            message.react("✅")
+            message.react("<a:794514869579153408:955522901463941161>")
             message.channel.send(queueEmbed);
           });
           break;
@@ -265,7 +265,7 @@ module.exports = {
           if (lyricsEmbed.description.length >= 2048)
       
             lyricsEmbed.description = `${lyricsEmbed.description.substr(0, 2045)}...`;
-            message.react("✅");
+            message.react("<a:794514869579153408:955522901463941161>");
           return result.edit(lyricsEmbed).catch(console.error);
 
           break;
