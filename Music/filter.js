@@ -24,7 +24,7 @@ async execute(message, args, client) {
     //get serverqueue
     const queue = message.client.queue.get(message.guild.id);
     //react with approve emoji
-    message.react("✅").catch(console.error);
+    message.react("<a:794514869579153408:955522901463941161>").catch(console.error);
     //if the argslength is null return error
     //if there is already a search return error
     if (message.channel.activeCollector)
@@ -91,7 +91,7 @@ async execute(message, args, client) {
         //fires if not valid input
         varforfilter = 404;
         message.channel.send(new MessageEmbed()
-        .setColor("#c219d8")
+        .setColor("RANDOM")
         .setTitle("Not a valid Filter, use one of those:")
         .setDescription(`
         \`bassboost\`
@@ -116,7 +116,7 @@ async execute(message, args, client) {
       const song = queue.songs[0];
       //play the collected song song, message, client, filters
       message.channel.send(new MessageEmbed()
-      .setColor("#c219d8")
+      .setColor("RANDOM")
       .setAuthor("Applying: " + args[0], "https://cdn.discordapp.com/emojis/769935094285860894.gif")).then(msg =>{
         msg.delete({timeout: 2000});
       })
