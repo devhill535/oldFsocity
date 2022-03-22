@@ -20,7 +20,7 @@ async execute(message) {
     //if not in a Guild return
     if(!message.guild) return;
     //react with approve emoji
-    message.react("✅").catch(console.error);
+    message.react("<a:794514869579153408:955522901463941161>").catch(console.error);
     //Get the current Queue
     const queue = message.client.queue.get(message.guild.id);
     //If no Queue Error
@@ -32,7 +32,7 @@ async execute(message) {
     //define the temporary Embed
     let temEmbed = new MessageEmbed()
     .setAuthor("Searching...", "https://cdn.discordapp.com/emojis/757632044632375386.gif?v=1").setFooter("Lyrics")
-    .setColor("#f300e5")
+    .setColor("RANDOM")
     //send it and safe it in a variable
     let result = await message.channel.send(temEmbed)
     //try to find lyrics
@@ -50,7 +50,7 @@ async execute(message) {
     let lyricsEmbed = new MessageEmbed()
       .setTitle("📑 Lyrics")
       .setDescription(lyrics)
-      .setColor("#f300e5")
+      .setColor("RANDOM")
     //if to long make slice it 
     if (lyricsEmbed.description.length >= 2048)
       //slice the embed description and redefine it
