@@ -23,7 +23,7 @@ async execute(message,args,client) {
      //get serverqueue
      const serverQueue = message.client.queue.get(message.guild.id);
     //react with approve emoji
-    message.react("✅").catch(console.error);
+    message.react("<a:794514869579153408:955522901463941161>").catch(console.error);
     //if the argslength is null return error
     if (!args.length)
       return attentionembed(message,`Usage: ${message.client.prefix}${module.exports.name} <Video Name>`)
@@ -41,12 +41,12 @@ async execute(message,args,client) {
     //define a temporary Loading Embed
     let temEmbed = new MessageEmbed()
     .setAuthor("Searching...", "https://cdn.discordapp.com/emojis/757632044632375386.gif?v=1")
-    .setColor("#f300e5")
+    .setColor("RANOM")
     //define the Result Embed
     let resultsEmbed = new MessageEmbed()
-      .setTitle("✅ Results for: ")
+      .setTitle("<a:794514869579153408:955522901463941161> Results for: ")
       .setDescription(`\`${search}\``)
-      .setColor("#f300e5")
+      .setColor("RANDOM")
       .setFooter("Response with your favorite number", client.user.displayAvatarURL() )
     //try to find top 5 results
     try {
